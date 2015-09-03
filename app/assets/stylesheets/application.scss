@@ -1,0 +1,79 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$font-stack:  Helvetica, Arial, sans-serif;
+$primary-color: #699;
+$white: #fff;
+
+body {
+  font: 100% $font-stack;
+  color: $white;
+  font-size: 16px;
+  background-color: $primary-color;
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  color: #000;
+}
+
+ul, li {
+  list-style-type: none;
+  display: inline;
+  color: $white;
+}
+
+a{
+  color: $white;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: normal;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+p {
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.vertical-container {
+  height: 300px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+@media screen and (min-width:600px) {
+  nav {
+     display: inline;
+    width: 25%;
+  }
+}
+@media screen and (max-width:599px) {
+  nav {
+    float: left;
+    
+  }
+}
+
