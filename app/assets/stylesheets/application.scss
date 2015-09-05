@@ -16,6 +16,14 @@ body {
   flex-direction: column;
 }
 
+form {
+  color: #000;
+}
+
+form label {
+  color: $white;
+}
+
 nav {
   color: #000;
 }

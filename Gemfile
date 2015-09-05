@@ -30,3 +30,4 @@ end
 gem 'devise'
 gem 'figaro'
 gem 'bootstrap-sass'
+gem 'simple_form'

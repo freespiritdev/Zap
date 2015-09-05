@@ -6,12 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="site">
+<body>
   <div class="container">
     <nav>
       <ul>
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Women" %></li>
+        <li><%= link_to "Women",women_path %></li>
         <li><%= link_to "Men" %></li>
         <li><%= link_to "Girls" %></li>
         <li><%= link_to "Boys" %></li>
@@ -43,6 +43,5 @@
       </em>
     </footer>
   </div>
-  
 </body>
 </html>
