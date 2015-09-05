@@ -1,0 +1,38 @@
+<h1>Edit Women</h1>
+
+<%= simple_form_for(@woman) do |f| %>
+  <% if @woman.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@woman.errors.count, "error") %> prohibited this women's item from being saved:</h2>
+
+      <ul>
+      <% @woman.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, rows: 6 %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %>
