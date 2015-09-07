@@ -2,7 +2,7 @@
 @import "bootstrap";
 
 $font-stack:  Helvetica, Arial, sans-serif;
-$primary-color: #699;
+$primary-color: #34495e;
 $white: #fff;
 
 body {
@@ -36,6 +36,10 @@ ul, li {
 
 a{
   color: $white;
+}
+
+em{
+  color: #27ae60;
 }
 
 h1 {
