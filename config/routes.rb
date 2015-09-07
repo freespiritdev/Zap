@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resource :products
   resource :women
 
   devise_for :users
