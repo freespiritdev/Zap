@@ -11,7 +11,7 @@ class WomenController < ApplicationController
   def create
     @woman = Woman.new(woman_params)
     if @woman.save
-      redirect_to @women, notice: "Women item added!"
+      redirect_to women_path, notice: "Women item added!"
     else
       render action: 'new'
     end
