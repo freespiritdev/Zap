@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+ # before_action :set_product, only: [:show, :edit, :update, :destroy]
   def index
     @products = Product.all
   end
@@ -17,18 +17,41 @@ class ProductsController < ApplicationController
     end
   end
 
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to @product, notice: 'Product successfully updated!'
+    else
+      render action: 'edit'
+    end
+  end
+
   def edit
   end
 
   def show
   end
 
-  private
+  def destroy
+    @product.destroy
+    title = @product.title
 
-    def set_product
+    if @product.destroy
+      flash[:notice] = "\"#{title}\" was deleted!"
+      redirect_to @product
+    else
+      flash[:error] = "There was an error!"
+      render :show
     end
-  
+  end
+
+  private
+=begin def set_product
+      @product = Product.find(params[:id])
+    end
+=end
     def product_params
       params.require(:product).permit(:title, :description, :image_url, :price)
     end
+
 end

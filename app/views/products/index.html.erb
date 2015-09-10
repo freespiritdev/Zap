@@ -24,5 +24,17 @@
 </table>
 </div>
 
+<h1>All Posts</h1>
+ <% @products.each do |product| %>
+   <p><%= link_to product.title, product %></p>
+   <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading">
+         <%= link_to product.title, product %>
+       </h4>
+     </div>
+   </div>
+ <% end %>
+
 
 <%= link_to 'New Product', new_product_path %>
