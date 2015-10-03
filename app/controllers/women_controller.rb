@@ -17,6 +17,10 @@ class WomenController < ApplicationController
     end
   end
 
+  def show
+    @woman = Woman.find(params[:id])
+  end
+  
   private
     def set_woman
     end
